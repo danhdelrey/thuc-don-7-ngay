@@ -2,7 +2,10 @@ name: Review dish images
 on:
   workflow_dispatch:
   push:
-    paths: ['tools/images.json', 'tools/fetch_images.py']
+    branches: [main]
+    paths: ['tools/images.json', 'tools/fetch_images.py', '.github/workflows/review-images.yml']
+permissions:
+  contents: write
 jobs:
   review:
     runs-on: ubuntu-latest
@@ -10,7 +13,9 @@ jobs:
       - uses: actions/checkout@v4
       - run: sudo apt-get install -y -qq imagemagick >/dev/null || true
       - run: python3 tools/fetch_images.py review
-      - uses: actions/upload-artifact@v4
-        with:
-          name: review
-          path: review/
+      - name: Push results to image-review branch
+        run: |
+          cd review && rm -f *-[0-9].jpg
+          git init -q -b image-review && git add -A
+          git -c user.name=bot -c user.email=bot@users.noreply.github.com commit -qm "image review ${{ github.run_number }}"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" image-review
