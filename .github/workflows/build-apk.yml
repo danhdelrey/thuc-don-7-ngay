@@ -19,14 +19,26 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: Restore signing key
-        run: echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > release.jks
+      - name: Prepare signing key
+        env:
+          KS_B64: ${{ secrets.KEYSTORE_BASE64 }}
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD || 'temporary-build-key' }}
+        run: |
+          if [ -n "$KS_B64" ]; then
+            echo "$KS_B64" | base64 -d > release.jks
+            echo "Using the signing key from repository secrets."
+          else
+            echo "::warning::KEYSTORE_BASE64 secret is not set; signing with a temporary key. Updates will need a reinstall until the secret is added."
+            keytool -genkeypair -keystore release.jks -alias thucdon -keyalg RSA -keysize 2048 \
+              -validity 10000 -storepass "$KEYSTORE_PASSWORD" -keypass "$KEYSTORE_PASSWORD" \
+              -dname "CN=Thuc Don 7 Ngay, C=VN"
+          fi
 
       - name: Build
         env:
           KEYSTORE: release.jks
           KEY_ALIAS: thucdon
-          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD || 'temporary-build-key' }}
           VERSION_CODE: ${{ github.run_number }}
           VERSION_NAME: 1.0.${{ github.run_number }}
         run: ./build.sh
