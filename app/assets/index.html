@@ -9,29 +9,50 @@
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 body{margin:0;background:#F2F6F0;color:#1C2420;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 button{font:inherit;color:inherit;cursor:pointer}
+button:disabled{opacity:.45;cursor:default}
 .wrap{max-width:480px;margin:0 auto;padding:16px 16px 40px;display:flex;flex-direction:column;gap:16px}
 .kick{font-size:12px;font-weight:700;letter-spacing:1.5px;color:#2E6B45}
 h1{margin:2px 0;font-size:27px;font-weight:800}
-.sub{font-size:15px;color:#4A554F}
+.sub{font-size:15px;color:#4A554F;line-height:1.45}
 .org{color:#8A3D10}
 .tabs{display:grid;grid-template-columns:1fr 1fr;gap:4px;background:#E1E9DE;border-radius:14px;padding:4px;position:sticky;top:8px;z-index:2}
 .tab{min-height:46px;border:none;border-radius:11px;background:transparent;font-size:15px;font-weight:700;color:#4A554F}
 .tab.on{background:#fff;color:#2E6B45;box-shadow:0 1px 3px rgba(0,0,0,.12)}
-.days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
-.day{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-height:64px;border:1px solid #D5DFD2;border-radius:14px;background:#fff;padding:6px 0}
-.day small{font-size:11px;line-height:1}.day b{font-size:19px;line-height:1.1}.day i{font-style:normal;font-size:10px;font-weight:700;color:#7A857F}
-.day.done i{color:#2E6B45}
-.day.on{background:#2E6B45;border-color:#2E6B45;color:#fff}.day.on i{color:#D7EBDD}
-.card{background:#fff;border-radius:20px;padding:18px 16px;display:flex;flex-direction:column;gap:12px}
-.row{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
-.ttl{font-size:24px;font-weight:800;color:#2E6B45}
-.badge{align-self:flex-start;font-size:13px;font-weight:600;color:#8A3D10;background:#FCEBDD;padding:6px 10px;border-radius:999px}
+.card{background:#fff;border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:12px}
+.plan{background:#2E6B45;color:#fff}
+.plan .lbl{color:#CFE5D6}
+.slot{background:rgba(255,255,255,.12);border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:6px}
+.slot b{font-size:17px}
+.slot .hint{font-size:14px;color:#DDEDE2;line-height:1.45}
+.lbl{font-size:12px;font-weight:700;letter-spacing:.6px;color:#4A554F}
+.row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.ttl{font-size:22px;font-weight:800;color:#2E6B45}
 .prog{display:flex;align-items:center;gap:10px}.bar{flex:1;height:8px;background:#E6ECE4;border-radius:999px;overflow:hidden}.bar span{display:block;height:100%;background:#2E6B45;border-radius:999px;transition:width .2s}
-.prog em{font-style:normal;font-size:13px;font-weight:600;color:#4A554F;white-space:nowrap}
-.item{display:flex;gap:12px;align-items:flex-start;width:100%;min-height:64px;padding:12px;border:1px solid #E6ECE4;border-radius:14px;background:#FAFCF9;text-align:left}
-.item.thaw{border-style:dashed;border-color:#C9D5C5;background:#fff;min-height:56px}
+.plan .bar{background:rgba(255,255,255,.25)}.plan .bar span{background:#fff}
+.prog em{font-style:normal;font-size:13px;font-weight:600;white-space:nowrap}
+.btn{min-height:46px;padding:0 14px;border:1px solid #C9D5C5;border-radius:12px;background:#fff;font-size:15px;font-weight:600}
+.btn.pri{background:#2E6B45;border-color:#2E6B45;color:#fff}
+.btn.light{background:#fff;color:#2E6B45;border-color:#fff}
+.btn.sel{background:#E3EFE6;border-color:#2E6B45;color:#2E6B45}
+.thawbtn{display:flex;gap:12px;align-items:center;width:100%;min-height:52px;padding:10px 12px;border:1px dashed rgba(255,255,255,.6);border-radius:12px;background:transparent;color:#fff;text-align:left}
+.ghead{display:flex;flex-direction:column;gap:4px;margin-top:4px}
+.ghead h2{margin:0;font-size:19px;font-weight:800}
+.ghead p{margin:0;font-size:13px;line-height:1.45;color:#4A554F}
+.combo{padding:0;overflow:hidden;gap:0}
+.chead{display:flex;flex-direction:column;gap:6px;width:100%;padding:14px 16px;border:none;background:transparent;text-align:left}
+.cname{font-size:17px;font-weight:700;line-height:1.35}
+.eaten .cname{color:#8A958F;text-decoration:line-through}
+.cmeta{font-size:13px;color:#5B6660;line-height:1.45}
+.chip{font-size:12px;font-weight:700;padding:3px 9px;border-radius:999px;white-space:nowrap}
+.c-today{background:#2E6B45;color:#fff}.c-tom{background:#FCEBDD;color:#8A3D10}.c-done{background:#E6ECE4;color:#4A554F}
+.num{font-size:12px;font-weight:700;color:#2E6B45;letter-spacing:.5px}
+.cbody{display:flex;flex-direction:column;gap:10px;padding:0 16px 16px}
+.acts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.acts .full{grid-column:1/-1}
+.item{display:flex;gap:12px;align-items:flex-start;width:100%;min-height:62px;padding:12px;border:1px solid #E6ECE4;border-radius:14px;background:#FAFCF9;text-align:left}
 .box{flex:0 0 26px;width:26px;height:26px;border:2.5px solid #2E6B45;border-radius:8px;background:#fff;display:flex;align-items:center;justify-content:center}
 .chk .box{background:#2E6B45}
+.thawbtn .box{border-color:#fff;background:transparent}.thawbtn.chk .box{background:#fff}
 .box svg{display:none}.chk .box svg{display:block}
 .col{flex:1;min-width:0;display:flex;flex-direction:column;gap:4px}
 .meta{display:flex;justify-content:space-between;align-items:center;gap:8px}
@@ -39,18 +60,14 @@ h1{margin:2px 0;font-size:27px;font-weight:800}
 .p-A{color:#2E6B45;background:#E3EFE6}.p-B{color:#8A3D10;background:#FCEBDD}.p-Canh{color:#1F5C8A;background:#E3EEF7}.p-Rau{color:#4D5B10;background:#EEF2DC}
 .when{font-size:12px;color:#5B6660;margin-left:6px}
 .price{font-size:14px;font-weight:700;color:#8A3D10;white-space:nowrap}
-.name{font-size:17px;font-weight:600;line-height:1.35}
+.name{font-size:16px;font-weight:600;line-height:1.35}
 .chk .name{color:#8A958F;text-decoration:line-through}
 .ingr{font-size:13px;line-height:1.45;color:#5B6660}
-.lbl{font-size:12px;font-weight:700;letter-spacing:.5px;color:#4A554F}
-.nav{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.btn{min-height:46px;border:1px solid #C9D5C5;border-radius:12px;background:#fff;font-size:15px;font-weight:600}
-.btn.pri{background:#2E6B45;border-color:#2E6B45;color:#fff}
 .legend{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;font-size:14px;line-height:1.4}
 .h3{font-size:16px;font-weight:800;color:#2E6B45}
 .shop{display:flex;gap:12px;align-items:center;width:100%;min-height:54px;padding:8px 4px;border:none;border-bottom:1px solid #EEF2EC;background:transparent;text-align:left}
 .shop:last-child{border-bottom:none}
-.shop .name{flex:1;min-width:0;font-size:16px}
+.shop .name{flex:1;min-width:0}
 .qty{display:flex;flex-direction:column;align-items:flex-end;gap:1px}.qty b{font-size:15px;white-space:nowrap}.qty span{font-size:13px;color:#8A3D10;white-space:nowrap}
 .spices{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .sp{display:flex;gap:10px;align-items:center;min-height:50px;padding:8px 10px;border:1px solid #E6ECE4;border-radius:12px;background:#FAFCF9;text-align:left}
@@ -59,87 +76,134 @@ h1{margin:2px 0;font-size:27px;font-weight:800}
 .total b{font-size:32px;font-weight:800;white-space:nowrap}
 .reset{align-self:center;min-height:46px;padding:0 18px;border:1px solid #C9D5C5;border-radius:999px;background:#fff;font-size:14px;font-weight:600;color:#4A554F}
 .note{font-size:12px;line-height:1.5;color:#5B6660;text-align:center}
+ol.tips{margin:0;padding-left:20px;font-size:14px;line-height:1.55}
 </style>
 </head>
 <body>
 <div class="wrap" id="app"></div>
 <script>
-var DATA = {"days": [{"n": 1, "badge": "Đợt 1: mua từ tối hôm trước", "thaw": "Không cần, đồ Ngày 2 đã để sẵn ngăn mát", "total": 79, "items": [{"type": "A", "when": "Sáng + trưa", "name": "Thịt heo xào hành tây", "ingr": "200 g thịt lát (T2) · 1 củ hành tây · tỏi · dầu hào", "price": 33}, {"type": "B", "when": "Tối", "name": "Đậu hũ sốt cà chua", "ingr": "2 miếng đậu hũ · 2 quả cà chua · hành lá", "price": 21}, {"type": "Canh", "when": "Sáng + tối", "name": "Canh cải ngọt thịt bằm", "ingr": "~200 g cải ngọt · 60 g thịt bằm (S)", "price": 14}, {"type": "Rau", "when": "Trưa + tối", "name": "Cải thìa xào tỏi", "ingr": "~350 g cải thìa · tỏi · dầu hào", "price": 11}]}, {"n": 2, "badge": "", "thaw": "S, T1, G3", "total": 69, "items": [{"type": "A", "when": "Sáng + trưa", "name": "Thịt bằm rim nước mắm", "ingr": "210 g thịt bằm (L) · hành tím · nước mắm · đường", "price": 30}, {"type": "B", "when": "Tối", "name": "Trứng sốt cà chua", "ingr": "2 quả trứng · 2 quả cà chua", "price": 15}, {"type": "Canh", "when": "Sáng + tối", "name": "Canh mướp thịt bằm", "ingr": "1 quả mướp · 60 g thịt bằm (S) · hành lá", "price": 16}, {"type": "Rau", "when": "Trưa + tối", "name": "Cải ngọt luộc", "ingr": "~300 g cải ngọt", "price": 8}]}, {"n": 3, "badge": "Tối nay đi chợ đợt 2", "thaw": "S, L", "total": 79, "items": [{"type": "A", "when": "Sáng + trưa", "name": "Gà rim nước mắm tỏi", "ingr": "300 g đùi gà (G3) · tỏi · nước mắm · đường", "price": 27}, {"type": "B", "when": "Tối", "name": "Thịt heo xào cà chua", "ingr": "100 g thịt lát (T1) · 2 quả cà chua · hành lá", "price": 22}, {"type": "Canh", "when": "Sáng + tối", "name": "Canh bí đỏ thịt bằm", "ingr": "~350 g bí đỏ · 60 g thịt bằm (S)", "price": 17}, {"type": "Rau", "when": "Trưa + tối", "name": "Mướp xào trứng", "ingr": "1 quả mướp · 2 quả trứng", "price": 13}]}, {"n": 4, "badge": "", "thaw": "G1, M", "total": 74, "items": [{"type": "A", "when": "Sáng + trưa", "name": "Thịt bằm sốt cà chua", "ingr": "210 g thịt bằm (L) · 3 quả cà chua · hành tím", "price": 44}, {"type": "B", "when": "Tối", "name": "Trứng hấp nước tương", "ingr": "2 quả trứng · nước tương", "price": 6}, {"type": "Canh", "when": "Sáng + tối", "name": "Canh bí đao thịt bằm", "ingr": "~400 g bí đao · 60 g thịt bằm (S)", "price": 17}, {"type": "Rau", "when": "Trưa + tối", "name": "Bắp cải luộc", "ingr": "~350 g bắp cải", "price": 7}]}, {"n": 5, "badge": "", "thaw": "L, C", "total": 84, "items": [{"type": "A", "when": "Sáng + trưa", "name": "Gà xào sả ớt", "ingr": "300 g đùi gà (G1) · sả · tỏi · ớt", "price": 27}, {"type": "B", "when": "Tối", "name": "Đậu hũ non sốt thịt bằm", "ingr": "1 hộp đậu hũ non · 70 g thịt bằm (M) · dầu hào", "price": 22}, {"type": "Canh", "when": "Sáng + tối", "name": "Canh kim chi đậu hũ", "ingr": "200 g kim chi · 1 miếng đậu hũ", "price": 25}, {"type": "Rau", "when": "Trưa + tối", "name": "Bắp cải xào cà chua", "ingr": "~300 g bắp cải · 1 quả cà chua", "price": 10}]}, {"n": 6, "badge": "", "thaw": "G2, S", "total": 85, "items": [{"type": "A", "when": "Sáng + trưa", "name": "Đậu que xào thịt bằm", "ingr": "300 g đậu que · 210 g thịt bằm (L) · dầu hào", "price": 39}, {"type": "B", "when": "Tối", "name": "Cá basa áp chảo sốt nước tương", "ingr": "150 g cá basa (C) · nước tương · đường", "price": 10}, {"type": "Canh", "when": "Sáng + tối", "name": "Canh nấm đậu hũ", "ingr": "1 gói nấm kim châm · 1 miếng đậu hũ · hành lá", "price": 21}, {"type": "Rau", "when": "Trưa + tối", "name": "Bông cải xanh xào tỏi", "ingr": "1 bông cải xanh ~300 g · tỏi · dầu hào", "price": 15}]}, {"n": 7, "badge": "", "thaw": "Không cần", "total": 70, "items": [{"type": "A", "when": "Sáng + trưa", "name": "Gà kho gừng", "ingr": "300 g đùi gà (G2) · gừng · hành tím · tiêu", "price": 27}, {"type": "B", "when": "Tối", "name": "Nấm kim châm xào trứng", "ingr": "1 gói nấm kim châm · 2 quả trứng · nước tương", "price": 21}, {"type": "Canh", "when": "Sáng + tối", "name": "Canh bắp cải thịt bằm", "ingr": "~250 g bắp cải · 60 g thịt bằm (S)", "price": 14}, {"type": "Rau", "when": "Trưa + tối", "name": "Bí đỏ xào tỏi", "ingr": "~300 g bí đỏ · tỏi", "price": 8}]}], "batches": [{"id": "s1", "title": "Đợt 1", "when": "Tối hôm trước Ngày 1", "items": [{"name": "Thịt heo bằm", "qty": "1 kg", "price": 143}, {"name": "Thịt heo thái lát", "qty": "300 g", "price": 40}, {"name": "Đùi gà phi lê", "qty": "900 g", "price": 81}, {"name": "Trứng gà", "qty": "10 quả", "price": 28}, {"name": "Đậu hũ trắng", "qty": "2 miếng", "price": 12}, {"name": "Cà chua", "qty": "6 quả", "price": 27}, {"name": "Hành tây", "qty": "1 củ", "price": 6}, {"name": "Cải ngọt", "qty": "1 bó ~500 g", "price": 13}, {"name": "Cải thìa", "qty": "1 bó ~350 g", "price": 11}, {"name": "Mướp", "qty": "2 quả", "price": 15}, {"name": "Bí đỏ", "qty": "~350 g", "price": 9}, {"name": "Hành lá", "qty": "1 bó nhỏ", "price": 5}], "total": 390}, {"id": "s2", "title": "Đợt 2", "when": "Tối Ngày 3", "items": [{"name": "Cá basa phi lê", "qty": "150 g", "price": 11}, {"name": "Đậu hũ trắng", "qty": "2 miếng", "price": 12}, {"name": "Đậu hũ non", "qty": "1 hộp", "price": 12}, {"name": "Kim chi", "qty": "~200–250 g", "price": 28}, {"name": "Cà chua", "qty": "4 quả", "price": 18}, {"name": "Bắp cải", "qty": "1 cái ~900 g", "price": 18}, {"name": "Bí đao", "qty": "~400 g", "price": 8}, {"name": "Đậu que", "qty": "~300 g", "price": 9}, {"name": "Nấm kim châm", "qty": "2 gói", "price": 30}, {"name": "Bông cải xanh", "qty": "1 bông ~300 g", "price": 15}, {"name": "Bí đỏ", "qty": "~300 g", "price": 8}, {"name": "Hành lá", "qty": "1 bó nhỏ", "price": 5}], "total": 174}], "spices": ["Nước mắm", "Nước tương", "Muối", "Đường", "Hạt nêm", "Tiêu", "Dầu ăn", "Dầu hào", "Ớt", "Tỏi 2–3 củ", "Hành tím 4–5 củ", "Sả 3 cây", "Gừng 1 củ nhỏ"], "total": 583};
-var KEY = 'thucdon7ngay-v1';
-var S = { tab: 'menu', day: 1, checked: {} };
-try { var raw = localStorage.getItem(KEY); if (raw) { var v = JSON.parse(raw); S.tab = v.tab || 'menu'; S.day = v.day || 1; S.checked = v.checked || {}; } } catch (e) {}
+var DATA = {"combos": [{"id": 1, "group": 1, "name": "Heo xào hành tây", "thaw": "T2, S", "total": 79, "items": [{"type": "A", "when": "Sáng + trưa", "name": "Thịt heo xào hành tây", "ingr": "200 g thịt lát (T2) · 1 củ hành tây · tỏi · dầu hào", "price": 33}, {"type": "B", "when": "Tối", "name": "Đậu hũ sốt cà chua", "ingr": "2 miếng đậu hũ · 2 quả cà chua · hành lá", "price": 21}, {"type": "Canh", "when": "Sáng + tối", "name": "Canh cải ngọt thịt bằm", "ingr": "~200 g cải ngọt · 60 g thịt bằm (S)", "price": 14}, {"type": "Rau", "when": "Trưa + tối", "name": "Cải thìa xào tỏi", "ingr": "~350 g cải thìa · tỏi · dầu hào", "price": 11}]}, {"id": 2, "group": 1, "name": "Thịt bằm rim", "thaw": "L, S", "total": 69, "items": [{"type": "A", "when": "Sáng + trưa", "name": "Thịt bằm rim nước mắm", "ingr": "210 g thịt bằm (L) · hành tím · nước mắm · đường", "price": 30}, {"type": "B", "when": "Tối", "name": "Trứng sốt cà chua", "ingr": "2 quả trứng · 2 quả cà chua", "price": 15}, {"type": "Canh", "when": "Sáng + tối", "name": "Canh mướp thịt bằm", "ingr": "1 quả mướp · 60 g thịt bằm (S) · hành lá", "price": 16}, {"type": "Rau", "when": "Trưa + tối", "name": "Cải ngọt luộc", "ingr": "~300 g cải ngọt", "price": 8}]}, {"id": 3, "group": 1, "name": "Gà rim tỏi", "thaw": "G3, T1, S", "total": 79, "items": [{"type": "A", "when": "Sáng + trưa", "name": "Gà rim nước mắm tỏi", "ingr": "300 g đùi gà (G3) · tỏi · nước mắm · đường", "price": 27}, {"type": "B", "when": "Tối", "name": "Thịt heo xào cà chua", "ingr": "100 g thịt lát (T1) · 2 quả cà chua · hành lá", "price": 22}, {"type": "Canh", "when": "Sáng + tối", "name": "Canh bí đỏ thịt bằm", "ingr": "~350 g bí đỏ · 60 g thịt bằm (S)", "price": 17}, {"type": "Rau", "when": "Trưa + tối", "name": "Mướp xào trứng", "ingr": "1 quả mướp · 2 quả trứng", "price": 13}]}, {"id": 4, "group": 2, "name": "Thịt bằm sốt cà", "thaw": "L, S", "total": 74, "items": [{"type": "A", "when": "Sáng + trưa", "name": "Thịt bằm sốt cà chua", "ingr": "210 g thịt bằm (L) · 3 quả cà chua · hành tím", "price": 44}, {"type": "B", "when": "Tối", "name": "Trứng hấp nước tương", "ingr": "2 quả trứng · nước tương", "price": 6}, {"type": "Canh", "when": "Sáng + tối", "name": "Canh bí đao thịt bằm", "ingr": "~400 g bí đao · 60 g thịt bằm (S)", "price": 17}, {"type": "Rau", "when": "Trưa + tối", "name": "Bắp cải luộc", "ingr": "~350 g bắp cải", "price": 7}]}, {"id": 5, "group": 2, "name": "Gà xào sả ớt", "thaw": "G1, M", "total": 84, "items": [{"type": "A", "when": "Sáng + trưa", "name": "Gà xào sả ớt", "ingr": "300 g đùi gà (G1) · sả · tỏi · ớt", "price": 27}, {"type": "B", "when": "Tối", "name": "Đậu hũ non sốt thịt bằm", "ingr": "1 hộp đậu hũ non · 70 g thịt bằm (M) · dầu hào", "price": 22}, {"type": "Canh", "when": "Sáng + tối", "name": "Canh kim chi đậu hũ", "ingr": "200 g kim chi · 1 miếng đậu hũ", "price": 25}, {"type": "Rau", "when": "Trưa + tối", "name": "Bắp cải xào cà chua", "ingr": "~300 g bắp cải · 1 quả cà chua", "price": 10}]}, {"id": 6, "group": 2, "name": "Đậu que xào thịt + cá basa", "thaw": "L, C", "total": 85, "items": [{"type": "A", "when": "Sáng + trưa", "name": "Đậu que xào thịt bằm", "ingr": "300 g đậu que · 210 g thịt bằm (L) · dầu hào", "price": 39}, {"type": "B", "when": "Tối", "name": "Cá basa áp chảo sốt nước tương", "ingr": "150 g cá basa (C) · nước tương · đường", "price": 10}, {"type": "Canh", "when": "Sáng + tối", "name": "Canh nấm đậu hũ", "ingr": "1 gói nấm kim châm · 1 miếng đậu hũ · hành lá", "price": 21}, {"type": "Rau", "when": "Trưa + tối", "name": "Bông cải xanh xào tỏi", "ingr": "1 bông cải xanh ~300 g · tỏi · dầu hào", "price": 15}]}, {"id": 7, "group": 2, "name": "Gà kho gừng", "thaw": "G2, S", "total": 70, "items": [{"type": "A", "when": "Sáng + trưa", "name": "Gà kho gừng", "ingr": "300 g đùi gà (G2) · gừng · hành tím · tiêu", "price": 27}, {"type": "B", "when": "Tối", "name": "Nấm kim châm xào trứng", "ingr": "1 gói nấm kim châm · 2 quả trứng · nước tương", "price": 21}, {"type": "Canh", "when": "Sáng + tối", "name": "Canh bắp cải thịt bằm", "ingr": "~250 g bắp cải · 60 g thịt bằm (S)", "price": 14}, {"type": "Rau", "when": "Trưa + tối", "name": "Bí đỏ xào tỏi", "ingr": "~300 g bí đỏ · tỏi", "price": 8}]}], "batches": [{"id": "s1", "title": "Đợt 1", "when": "Trước khi bắt đầu · toàn bộ thịt + rau cho nhóm 1", "items": [{"name": "Thịt heo bằm", "qty": "1 kg", "price": 143}, {"name": "Thịt heo thái lát", "qty": "300 g", "price": 40}, {"name": "Đùi gà phi lê", "qty": "900 g", "price": 81}, {"name": "Trứng gà", "qty": "10 quả", "price": 28}, {"name": "Đậu hũ trắng", "qty": "2 miếng", "price": 12}, {"name": "Cà chua", "qty": "6 quả", "price": 27}, {"name": "Hành tây", "qty": "1 củ", "price": 6}, {"name": "Cải ngọt", "qty": "1 bó ~500 g", "price": 13}, {"name": "Cải thìa", "qty": "1 bó ~350 g", "price": 11}, {"name": "Mướp", "qty": "2 quả", "price": 15}, {"name": "Bí đỏ", "qty": "~350 g", "price": 9}, {"name": "Hành lá", "qty": "1 bó nhỏ", "price": 5}], "total": 390}, {"id": "s2", "title": "Đợt 2", "when": "Khi gần ăn hết nhóm 1 · rau củ cho nhóm 2", "items": [{"name": "Cá basa phi lê", "qty": "150 g", "price": 11}, {"name": "Đậu hũ trắng", "qty": "2 miếng", "price": 12}, {"name": "Đậu hũ non", "qty": "1 hộp", "price": 12}, {"name": "Kim chi", "qty": "~200–250 g", "price": 28}, {"name": "Cà chua", "qty": "4 quả", "price": 18}, {"name": "Bắp cải", "qty": "1 cái ~900 g", "price": 18}, {"name": "Bí đao", "qty": "~400 g", "price": 8}, {"name": "Đậu que", "qty": "~300 g", "price": 9}, {"name": "Nấm kim châm", "qty": "2 gói", "price": 30}, {"name": "Bông cải xanh", "qty": "1 bông ~300 g", "price": 15}, {"name": "Bí đỏ", "qty": "~300 g", "price": 8}, {"name": "Hành lá", "qty": "1 bó nhỏ", "price": 5}], "total": 174}], "spices": ["Nước mắm", "Nước tương", "Muối", "Đường", "Hạt nêm", "Tiêu", "Dầu ăn", "Dầu hào", "Ớt", "Tỏi 2–3 củ", "Hành tím 4–5 củ", "Sả 3 cây", "Gừng 1 củ nhỏ"], "total": 583, "groups": {"1": {"title": "Nhóm 1 · ăn trước", "desc": "Dùng đồ đợt 1. Có rau lá mau héo nên ăn hết trong khoảng 3 ngày sau khi đi chợ, thứ tự tùy bạn."}, "2": {"title": "Nhóm 2 · ăn sau", "desc": "Dùng đồ đợt 2, mua khi gần ăn hết nhóm 1. Rau củ để được lâu, thứ tự tùy bạn; riêng đậu hũ trắng nên nấu trong 3 ngày."}}};
+var KEY = 'thucdon7-v2';
+var S = { tab: 'menu', today: 0, tomorrow: 0, open: 0, eaten: {}, checked: {} };
+try { var raw = localStorage.getItem(KEY); if (raw) { var v = JSON.parse(raw); for (var k in S) { if (v[k] !== undefined) S[k] = v[k]; } } } catch (e) {}
 function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
-var TICK = '<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+var TICK = '<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+function tick(c) { return '<span class="box" style="color:' + c + '">' + TICK + '</span>'; }
 function esc(t) { return String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
 function on(k) { return !!S.checked[k]; }
+function combo(id) { return DATA.combos[id - 1]; }
+function title(c) { return 'Thực đơn ' + c.id + ' · ' + c.name; }
+function dishKeys(id) { return [0, 1, 2, 3].map(function (i) { return 'c' + id + '-' + i; }); }
 function cnt(keys) { return keys.filter(on).length; }
-function dayKeys(n) { return ['d' + n + '-0', 'd' + n + '-1', 'd' + n + '-2', 'd' + n + '-3', 'd' + n + '-thaw']; }
-function bar(a, b) { return '<div class="prog"><div class="bar"><span style="width:' + Math.round(100 * a / b) + '%"></span></div><em>'; }
-function render() {
-  var h = '';
-  var shopKeys = [];
-  DATA.batches.forEach(function (b) { b.items.forEach(function (_, i) { shopKeys.push(b.id + '-' + i); }); });
-  h += '<div><div class="kick">1 NGƯỜI · 3 BỮA/NGÀY · NẤU 1 LẦN MỖI SÁNG</div><h1>Thực đơn 7 ngày</h1>';
-  h += '<div class="sub">Ước tính cả tuần <b class="org">~' + DATA.total + 'k</b> · săn sale còn ~455k</div></div>';
-  h += '<div class="tabs" role="tablist"><button class="tab' + (S.tab !== 'shop' ? ' on' : '') + '" role="tab" data-tab="menu">Thực đơn</button>';
-  h += '<button class="tab' + (S.tab === 'shop' ? ' on' : '') + '" role="tab" data-tab="shop">Đi chợ · ' + cnt(shopKeys) + '/' + shopKeys.length + '</button></div>';
-  if (S.tab !== 'shop') {
-    var d = DATA.days[S.day - 1];
-    h += '<div class="days">';
-    DATA.days.forEach(function (x) {
-      var dn = cnt(dayKeys(x.n));
-      h += '<button class="day' + (x.n === S.day ? ' on' : '') + (dn === 5 ? ' done' : '') + '" data-day="' + x.n + '" aria-pressed="' + (x.n === S.day) + '"><small>Ngày</small><b>' + x.n + '</b><i>' + (dn === 5 ? '✓' : dn + '/5') + '</i></button>';
-    });
-    h += '</div><div class="card"><div class="row"><div class="ttl">Ngày ' + d.n + '</div><div class="price">~' + d.total + 'k/ngày</div></div>';
-    if (d.badge) h += '<div class="badge">' + esc(d.badge) + '</div>';
-    var dn = cnt(dayKeys(d.n));
-    h += bar(dn, 5) + dn + '/5 xong</em></div>';
-    d.items.forEach(function (it, i) {
-      var k = 'd' + d.n + '-' + i;
-      h += '<button class="item' + (on(k) ? ' chk' : '') + '" data-k="' + k + '" aria-pressed="' + on(k) + '"><span class="box">' + TICK + '</span><span class="col">';
+function bar(a, b) { return '<div class="prog"><div class="bar"><span style="width:' + (b ? Math.round(100 * a / b) : 0) + '%"></span></div><em>'; }
+function eatenCount() { return DATA.combos.filter(function (c) { return S.eaten[c.id]; }).length; }
+
+function planCard() {
+  var h = '<div class="card plan"><div class="row"><div class="lbl">KẾ HOẠCH</div><div style="font-size:13px;font-weight:600">Đã ăn ' + eatenCount() + '/7</div></div>';
+  h += '<div class="slot"><div class="lbl">HÔM NAY NẤU</div>';
+  if (S.today) {
+    var t = combo(S.today), dn = cnt(dishKeys(t.id));
+    h += '<b>' + esc(title(t)) + '</b>' + bar(dn, 4) + dn + '/4 món xong</em></div>';
+    h += '<button class="btn light" data-open="' + t.id + '">Xem 4 món</button>';
+  } else {
+    h += '<div class="hint">Chưa chọn. Mở một thực đơn bên dưới rồi bấm “Nấu hôm nay”.</div>';
+  }
+  h += '</div><div class="slot"><div class="lbl">NGÀY MAI ĂN</div>';
+  if (S.tomorrow) {
+    var m = combo(S.tomorrow), tk = 'thaw-' + m.id;
+    h += '<b>' + esc(title(m)) + '</b>';
+    h += '<button class="thawbtn' + (on(tk) ? ' chk' : '') + '" data-k="' + tk + '" aria-pressed="' + on(tk) + '">' + tick('#2E6B45') + '<span class="col"><span style="font-size:12px;font-weight:700;letter-spacing:.5px;color:#CFE5D6">TỐI NAY RÃ ĐÔNG</span><span style="font-size:16px;font-weight:600">Chuyển túi ' + esc(m.thaw) + ' xuống ngăn mát</span></span></button>';
+  } else {
+    h += '<div class="hint">Chưa chọn. Chọn trước để biết tối nay cần rã đông túi nào.</div>';
+  }
+  h += '</div><button class="btn light" data-newday="1"' + (S.today ? '' : ' disabled') + '>Xong hôm nay · sang ngày mới</button></div>';
+  return h;
+}
+
+function comboCard(c) {
+  var isOpen = S.open === c.id, done = !!S.eaten[c.id];
+  var chip = S.today === c.id ? '<span class="chip c-today">Hôm nay</span>' : S.tomorrow === c.id ? '<span class="chip c-tom">Ngày mai</span>' : done ? '<span class="chip c-done">Đã ăn</span>' : '';
+  var dishes = c.items.map(function (it) { return it.name; }).join(' · ');
+  var h = '<div class="card combo' + (done ? ' eaten' : '') + '" id="combo-' + c.id + '">';
+  h += '<button class="chead" data-toggle="' + c.id + '" aria-expanded="' + isOpen + '"><span class="row"><span class="num">THỰC ĐƠN ' + c.id + '</span><span style="display:flex;gap:6px;align-items:center">' + chip + '<span class="price">~' + c.total + 'k</span></span></span>';
+  h += '<span class="cname">' + esc(c.name) + '</span><span class="cmeta">' + esc(dishes) + '</span><span class="cmeta">Rã đông tối hôm trước: <b>' + esc(c.thaw) + '</b> · ' + (isOpen ? 'Thu gọn ▴' : 'Xem chi tiết ▾') + '</span></button>';
+  if (isOpen) {
+    h += '<div class="cbody">';
+    c.items.forEach(function (it, i) {
+      var k = 'c' + c.id + '-' + i;
+      h += '<button class="item' + (on(k) ? ' chk' : '') + '" data-k="' + k + '" aria-pressed="' + on(k) + '">' + tick('#fff') + '<span class="col">';
       h += '<span class="meta"><span><span class="pill p-' + it.type + '">' + it.type + '</span><span class="when">' + it.when + '</span></span><span class="price">~' + it.price + 'k</span></span>';
       h += '<span class="name">' + esc(it.name) + '</span><span class="ingr">' + esc(it.ingr) + '</span></span></button>';
     });
-    var tk = 'd' + d.n + '-thaw';
-    h += '<button class="item thaw' + (on(tk) ? ' chk' : '') + '" data-k="' + tk + '" aria-pressed="' + on(tk) + '"><span class="box">' + TICK + '</span><span class="col"><span class="lbl">TỐI NAY RÃ ĐÔNG CHO MAI</span><span class="name">' + esc(d.thaw) + '</span></span></button>';
-    h += '<div class="nav"><button class="btn" data-nav="-1">‹ Ngày trước</button><button class="btn pri" data-nav="1">Ngày sau ›</button></div></div>';
-    h += '<div class="card"><div class="h3">Chia bữa mỗi ngày</div><div style="font-size:14px;line-height:1.5">Sáng: A + Canh · Trưa (hộp): A + Rau · Tối (hâm): B + Canh + Rau</div>';
+    h += '<div class="acts">';
+    h += '<button class="btn' + (S.today === c.id ? ' sel' : ' pri') + '" data-today="' + c.id + '">' + (S.today === c.id ? '✓ Hôm nay' : 'Nấu hôm nay') + '</button>';
+    h += '<button class="btn' + (S.tomorrow === c.id ? ' sel' : '') + '" data-tomorrow="' + c.id + '">' + (S.tomorrow === c.id ? '✓ Ngày mai' : 'Mai ăn món này') + '</button>';
+    h += '<button class="btn full" data-eaten="' + c.id + '">' + (done ? 'Bỏ đánh dấu đã ăn' : 'Đánh dấu đã ăn') + '</button>';
+    h += '</div></div>';
+  }
+  return h + '</div>';
+}
+
+function render() {
+  var h = '', shopKeys = [];
+  DATA.batches.forEach(function (b) { b.items.forEach(function (_, i) { shopKeys.push(b.id + '-' + i); }); });
+  h += '<div><div class="kick">1 NGƯỜI · 3 BỮA/NGÀY · CHỌN TỰ DO</div><h1>Thực đơn 7 ngày</h1>';
+  h += '<div class="sub">7 thực đơn, ăn theo thứ tự bạn thích · cả tuần <b class="org">~' + DATA.total + 'k</b></div></div>';
+  h += '<div class="tabs" role="tablist"><button class="tab' + (S.tab !== 'shop' ? ' on' : '') + '" role="tab" data-tab="menu">Thực đơn · ' + eatenCount() + '/7</button>';
+  h += '<button class="tab' + (S.tab === 'shop' ? ' on' : '') + '" role="tab" data-tab="shop">Đi chợ · ' + cnt(shopKeys) + '/' + shopKeys.length + '</button></div>';
+  if (S.tab !== 'shop') {
+    h += planCard();
+    ['1', '2'].forEach(function (g) {
+      h += '<div class="ghead"><h2>' + esc(DATA.groups[g].title) + '</h2><p>' + esc(DATA.groups[g].desc) + '</p></div>';
+      DATA.combos.filter(function (c) { return String(c.group) === g; }).forEach(function (c) { h += comboCard(c); });
+    });
+    h += '<div class="card"><div class="h3">Mỗi thực đơn chia 3 bữa</div><div style="font-size:14px;line-height:1.5">Sáng: A + Canh · Trưa (hộp): A + Rau · Tối (hâm): B + Canh + Rau</div>';
     h += '<div class="h3">Mã túi chia sẵn</div><div class="legend"><b>S</b><span>60 g thịt bằm (canh)</span><b>L</b><span>210 g thịt bằm (món A)</span><b>M</b><span>70 g thịt bằm (đậu hũ non)</span><b>T2 · T1</b><span>200 g · 100 g thịt lát</span><b>G1 · G2 · G3</b><span>300 g đùi gà ướp sả ớt · gừng · tỏi</span><b>C</b><span>150 g cá basa phi lê</span></div></div>';
   } else {
+    h += '<div class="card"><div class="h3">Đi chợ về làm gì</div><ol class="tips"><li>Chia thịt, gà, cá theo mã túi ở tab Thực đơn.</li><li>Túi của thực đơn định nấu sáng mai thì để ngăn mát, còn lại cấp đông.</li><li>Rau chưa rửa, bọc giấy để ngăn rau; đậu hũ ngâm nước, thay nước mỗi ngày.</li></ol></div>';
     DATA.batches.forEach(function (b) {
-      var keys = b.items.map(function (_, i) { return b.id + '-' + i; });
-      var dn = cnt(keys);
-      h += '<div class="card"><div class="row"><div><div class="ttl" style="font-size:22px">' + b.title + '</div><div class="sub" style="font-size:13px">' + esc(b.when) + '</div></div><div class="price" style="font-size:15px">~' + b.total + 'k</div></div>';
+      var keys = b.items.map(function (_, i) { return b.id + '-' + i; }), dn = cnt(keys);
+      h += '<div class="card"><div class="row"><div><div class="ttl">' + b.title + '</div><div class="sub" style="font-size:13px">' + esc(b.when) + '</div></div><div class="price" style="font-size:15px">~' + b.total + 'k</div></div>';
       h += bar(dn, keys.length) + dn + '/' + keys.length + ' đã mua</em></div><div>';
       b.items.forEach(function (r, i) {
         var k = keys[i];
-        h += '<button class="shop' + (on(k) ? ' chk' : '') + '" data-k="' + k + '" aria-pressed="' + on(k) + '"><span class="box">' + TICK + '</span><span class="name">' + esc(r.name) + '</span><span class="qty"><b>' + esc(r.qty) + '</b><span>~' + r.price + 'k</span></span></button>';
+        h += '<button class="shop' + (on(k) ? ' chk' : '') + '" data-k="' + k + '" aria-pressed="' + on(k) + '">' + tick('#fff') + '<span class="name">' + esc(r.name) + '</span><span class="qty"><b>' + esc(r.qty) + '</b><span>~' + r.price + 'k</span></span></button>';
       });
       h += '</div></div>';
     });
     h += '<div class="card"><div class="ttl" style="font-size:20px">Gia vị (nếu thiếu)</div><div class="sub" style="font-size:13px">Tỏi, hành tím, sả, gừng khoảng <b class="org">~20k</b>; còn lại thường có sẵn.</div><div class="spices">';
     DATA.spices.forEach(function (n, i) {
       var k = 'sp-' + i;
-      h += '<button class="sp' + (on(k) ? ' chk' : '') + '" data-k="' + k + '" aria-pressed="' + on(k) + '"><span class="box">' + TICK + '</span><span class="name">' + esc(n) + '</span></button>';
+      h += '<button class="sp' + (on(k) ? ' chk' : '') + '" data-k="' + k + '" aria-pressed="' + on(k) + '">' + tick('#fff') + '<span class="name">' + esc(n) + '</span></button>';
     });
     h += '</div></div><div class="total"><div><div style="font-size:16px;font-weight:700">Tổng ước tính cả tuần</div><div style="font-size:13px">Giá thường · săn sale ~455k</div></div><b>~' + DATA.total + 'k</b></div>';
   }
-  h += '<button class="reset" data-reset="1">Bỏ tick hết (tuần mới)</button>';
+  h += '<button class="reset" data-reset="1">Làm lại từ đầu (tuần mới)</button>';
   h += '<div class="note">Giá là ước tính theo giá thường ở Bách hóa XANH, có thể lệch ±10–15%; chưa tính gạo.</div>';
   document.getElementById('app').innerHTML = h;
 }
+
+var resetArmed = 0;
 document.addEventListener('click', function (e) {
-  var b = e.target.closest('button'); if (!b) return;
-  if (b.dataset.tab) { S.tab = b.dataset.tab; window.scrollTo(0, 0); }
-  else if (b.dataset.day) { S.day = +b.dataset.day; }
-  else if (b.dataset.nav) { S.day = ((S.day - 1 + (+b.dataset.nav) + 7) % 7) + 1; window.scrollTo(0, 0); }
-  else if (b.dataset.k) { if (S.checked[b.dataset.k]) delete S.checked[b.dataset.k]; else S.checked[b.dataset.k] = true; }
-  else if (b.dataset.reset) { if (confirmReset()) S.checked = {}; else return; }
+  var b = e.target.closest('button'); if (!b || b.disabled) return;
+  var ds = b.dataset, scrollTo = 0;
+  if (ds.tab) { S.tab = ds.tab; window.scrollTo(0, 0); }
+  else if (ds.toggle) { S.open = S.open === +ds.toggle ? 0 : +ds.toggle; }
+  else if (ds.open) { S.open = +ds.open; scrollTo = +ds.open; }
+  else if (ds.today) { var id = +ds.today; S.today = S.today === id ? 0 : id; if (S.tomorrow === S.today) S.tomorrow = 0; }
+  else if (ds.tomorrow) { var id2 = +ds.tomorrow; S.tomorrow = S.tomorrow === id2 ? 0 : id2; if (S.today === S.tomorrow) S.today = 0; }
+  else if (ds.eaten) { var id3 = +ds.eaten; if (S.eaten[id3]) delete S.eaten[id3]; else { S.eaten[id3] = true; if (S.today === id3) S.today = 0; } }
+  else if (ds.newday) { S.eaten[S.today] = true; S.today = S.tomorrow; S.tomorrow = 0; S.open = S.today; window.scrollTo(0, 0); }
+  else if (ds.k) { if (S.checked[ds.k]) delete S.checked[ds.k]; else S.checked[ds.k] = true; }
+  else if (ds.reset) {
+    var now = Date.now();
+    if (now - resetArmed > 3000) { resetArmed = now; b.textContent = 'Bấm lần nữa để xóa hết'; return; }
+    resetArmed = 0; S = { tab: 'menu', today: 0, tomorrow: 0, open: 0, eaten: {}, checked: {} }; window.scrollTo(0, 0);
+  }
   else return;
   save(); render();
+  if (scrollTo) { var el = document.getElementById('combo-' + scrollTo); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
 });
-var resetArmed = 0;
-function confirmReset() { var now = Date.now(); if (now - resetArmed < 3000) { resetArmed = 0; return true; } resetArmed = now; var r = document.querySelector('.reset'); if (r) r.textContent = 'Bấm lần nữa để xác nhận'; return false; }
 render();
 </script>
 </body>

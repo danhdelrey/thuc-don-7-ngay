@@ -1,6 +1,6 @@
 # Thực đơn 7 ngày
 
-App Android nhỏ (WebView, chạy offline) để xem thực đơn nấu ăn 7 ngày cho 1 người và tick checklist món ăn, đi chợ.
+App Android nhỏ (WebView, chạy offline): 7 thực đơn nấu nhanh cho 1 người, chọn tự do thứ tự ăn, nhắc rã đông cho ngày mai, checklist món ăn và đi chợ.
 
 **Tải bản mới nhất:** [thuc-don-7-ngay.apk](../../releases/latest/download/thuc-don-7-ngay.apk)
 
