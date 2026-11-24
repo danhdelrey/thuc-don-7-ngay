@@ -1,6 +1,8 @@
 package vn.danh.thucdon;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -18,7 +20,16 @@ public class MainActivity extends Activity {
         s.setJavaScriptEnabled(true);
         s.setDomStorageEnabled(true);
         s.setAllowFileAccess(true);
-        web.setWebViewClient(new WebViewClient());
+        web.setWebViewClient(new WebViewClient() {
+            @Override public boolean shouldOverrideUrlLoading(WebView v, String url) {
+                if (url.startsWith("http://") || url.startsWith("https://")) {
+                    try { startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url))); } catch (Exception e) { }
+                    return true;
+                }
+                return false;
+            }
+        });
+        s.setSupportMultipleWindows(false);
         web.setBackgroundColor(0xFFF2F6F0);
         setContentView(web);
         if (savedInstanceState != null) {
