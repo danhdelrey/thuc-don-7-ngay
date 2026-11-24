@@ -1,0 +1,16 @@
+name: Review dish images
+on:
+  workflow_dispatch:
+  push:
+    paths: ['tools/images.json', 'tools/fetch_images.py']
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get install -y -qq imagemagick >/dev/null || true
+      - run: python3 tools/fetch_images.py review
+      - uses: actions/upload-artifact@v4
+        with:
+          name: review
+          path: review/
