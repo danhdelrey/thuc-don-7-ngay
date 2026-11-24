@@ -15,7 +15,7 @@ jobs:
       - run: python3 tools/fetch_images.py review
       - name: Push results to image-review branch
         run: |
-          cd review && rm -f *-[0-9].jpg
+          cd review
           git init -q -b image-review && git add -A
           git -c user.name=bot -c user.email=bot@users.noreply.github.com commit -qm "image review ${{ github.run_number }}"
           git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" image-review

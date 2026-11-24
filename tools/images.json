@@ -2,9 +2,9 @@
  "thit-heo-xao-hanh-tay": {
   "name": "Thịt heo xào hành tây",
   "q": [
-   "thịt heo xào hành tây",
-   "pork stir fry onion",
-   "stir-fried pork onions"
+   "pork onion",
+   "stir-fried pork slices",
+   "pork stir-fry"
   ],
   "pick": ""
  },
@@ -15,14 +15,14 @@
    "dau phu sot ca chua",
    "tofu tomato sauce"
   ],
-  "pick": ""
+  "pick": "File:Tomato-sauced tofu.jpg"
  },
  "canh-cai-ngot-thit-bam": {
   "name": "Canh cải ngọt thịt bằm",
   "q": [
-   "canh cải",
-   "canh rau cải",
-   "Vietnamese vegetable soup pork"
+   "mustard greens soup",
+   "canh rau",
+   "greens soup pork"
   ],
   "pick": ""
  },
@@ -33,7 +33,7 @@
    "stir-fried bok choy",
    "cải thìa"
   ],
-  "pick": ""
+  "pick": "File:Stir Fried Bok Choy, Aug 2025.jpg"
  },
  "thit-bam-rim-nuoc-mam": {
   "name": "Thịt bằm rim nước mắm",
@@ -42,7 +42,7 @@
    "caramelized ground pork",
    "thit kho"
   ],
-  "pick": ""
+  "pick": "File:Thit-kho-tieu-1.jpg"
  },
  "trung-sot-ca-chua": {
   "name": "Trứng sốt cà chua",
@@ -51,23 +51,23 @@
    "tomato egg stir fry",
    "eggs tomato sauce"
   ],
-  "pick": ""
+  "pick": "File:Stir Fried Tomatoes with Scrambled Eggs.jpg"
  },
  "canh-muop-thit-bam": {
   "name": "Canh mướp thịt bằm",
   "q": [
-   "canh mướp",
-   "luffa soup",
-   "sponge gourd soup"
+   "loofah soup",
+   "gourd soup",
+   "canh mướp"
   ],
   "pick": ""
  },
  "cai-ngot-luoc": {
   "name": "Cải ngọt luộc",
   "q": [
-   "rau luộc",
-   "boiled choy sum",
-   "choy sum"
+   "blanched greens",
+   "boiled greens",
+   "rau luộc"
   ],
   "pick": ""
  },
@@ -78,23 +78,23 @@
    "caramelized chicken",
    "chicken fish sauce"
   ],
-  "pick": ""
+  "pick": "File:Nhà mình dịp Lễ 2th9n2023 (gà kho sả) (1).jpg"
  },
  "thit-heo-xao-ca-chua": {
   "name": "Thịt heo xào cà chua",
   "q": [
-   "thịt xào cà chua",
-   "pork tomato stir fry",
-   "stir-fried pork tomato"
+   "pork with tomatoes",
+   "tomato pork",
+   "stir-fried pork tomatoes"
   ],
   "pick": ""
  },
  "canh-bi-do-thit-bam": {
   "name": "Canh bí đỏ thịt bằm",
   "q": [
-   "canh bí đỏ",
-   "pumpkin soup Vietnamese",
-   "canh bi do"
+   "kabocha soup",
+   "pumpkin soup pork",
+   "squash soup"
   ],
   "pick": ""
  },
@@ -105,7 +105,7 @@
    "luffa egg stir fry",
    "stir-fried luffa"
   ],
-  "pick": ""
+  "pick": "File:Sayur oyong.JPG"
  },
  "xuc-xich-xao-hanh-tay": {
   "name": "Xúc xích xào hành tây",
@@ -114,7 +114,7 @@
    "fried sausage onions",
    "sliced sausage fried"
   ],
-  "pick": ""
+  "pick": "File:DSC04403 Fried sausage with onions.JPG"
  },
  "trung-hap-nuoc-tuong": {
   "name": "Trứng hấp nước tương",
@@ -123,7 +123,7 @@
    "steamed egg",
    "gyeran-jjim"
   ],
-  "pick": ""
+  "pick": "File:Chawanmushi 001.jpg"
  },
  "canh-bi-dao-thit-bam": {
   "name": "Canh bí đao thịt bằm",
@@ -132,14 +132,14 @@
    "winter melon soup",
    "wax gourd soup"
   ],
-  "pick": ""
+  "pick": "File:Winter melon soup in home.jpg"
  },
  "bap-cai-luoc": {
   "name": "Bắp cải luộc",
   "q": [
-   "bắp cải luộc",
-   "boiled cabbage",
-   "cabbage boiled"
+   "steamed cabbage",
+   "boiled cabbage leaves",
+   "blanched cabbage"
   ],
   "pick": ""
  },
@@ -150,7 +150,7 @@
    "lemongrass chicken",
    "ga xao xa ot"
   ],
-  "pick": ""
+  "pick": "File:Lemongrass Chicken (7491346796).jpg"
  },
  "dau-hu-non-sot-thit-bam": {
   "name": "Đậu hũ non sốt thịt bằm",
@@ -159,7 +159,7 @@
    "đậu hũ non",
    "silken tofu minced pork"
   ],
-  "pick": ""
+  "pick": "File:Authentic Mapo Tofu.jpg"
  },
  "canh-kim-chi-dau-hu": {
   "name": "Canh kim chi đậu hũ",
@@ -168,14 +168,14 @@
    "kimchi stew tofu",
    "kimchi-jjigae"
   ],
-  "pick": ""
+  "pick": "File:Korean.cuisine-Kimchi jjigae-01.jpg"
  },
  "bap-cai-xao-ca-chua": {
   "name": "Bắp cải xào cà chua",
   "q": [
-   "bắp cải xào",
-   "stir-fried cabbage tomato",
-   "fried cabbage"
+   "stir-fried cabbage",
+   "cabbage stir fry",
+   "sauteed cabbage"
   ],
   "pick": ""
  },
@@ -186,7 +186,7 @@
    "green beans minced pork",
    "stir-fried green beans"
   ],
-  "pick": ""
+  "pick": "File:Green Beans with Minced Pork.jpg"
  },
  "ca-basa-ap-chao-sot-nuoc-tuong": {
   "name": "Cá basa áp chảo sốt nước tương",
@@ -195,14 +195,14 @@
    "fried fish fillet",
    "cá basa"
   ],
-  "pick": ""
+  "pick": "File:Pan-fried white fish fillet with vegetables.jpg"
  },
  "canh-nam-dau-hu": {
   "name": "Canh nấm đậu hũ",
   "q": [
+   "enoki mushroom soup",
    "mushroom tofu soup",
-   "enoki soup",
-   "miso soup tofu"
+   "tofu soup"
   ],
   "pick": ""
  },
@@ -213,23 +213,23 @@
    "stir-fried broccoli",
    "broccoli stir fry"
   ],
-  "pick": ""
+  "pick": "File:Stir-fried broccoli.jpg"
  },
  "ga-kho-gung": {
   "name": "Gà kho gừng",
   "q": [
-   "gà kho gừng",
-   "ginger chicken Vietnamese",
-   "ga kho gung"
+   "ginger chicken",
+   "chicken ginger braised",
+   "gà kho gừng"
   ],
   "pick": ""
  },
  "nam-kim-cham-xao-trung": {
   "name": "Nấm kim châm xào trứng",
   "q": [
-   "enoki mushroom egg",
-   "enoki mushroom stir fry",
-   "enokitake dish"
+   "enoki mushrooms",
+   "enokitake cooked",
+   "enoki stir fry"
   ],
   "pick": ""
  },
@@ -240,7 +240,7 @@
    "cabbage soup pork",
    "cabbage soup"
   ],
-  "pick": ""
+  "pick": "File:Pork & White Cabbage Soup.jpg"
  },
  "bi-do-xao-toi": {
   "name": "Bí đỏ xào tỏi",
@@ -249,6 +249,6 @@
    "pumpkin stir fry",
    "bí đỏ xào"
   ],
-  "pick": ""
+  "pick": "File:Pumpkin bitter gourd stir fry.jpg"
  }
 }

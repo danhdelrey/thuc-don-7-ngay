@@ -54,13 +54,17 @@ def main(mode):
         os.makedirs('review', exist_ok=True); allc = {}
         for k, d in D.items():
             seen, cands = set(), []
+            if d.get('pick'):
+                try:
+                    for c in by_title(d['pick']): seen.add(c['title']); cands.append(c)
+                except Exception as e: print('ERR pick', k, e)
             for q in d['q']:
                 try:
                     for c in search(q):
                         if c['title'] not in seen: seen.add(c['title']); cands.append(c)
                 except Exception as e: print('ERR', k, q, e)
-                if len(cands) >= 8: break
-            cands = cands[:8]; allc[k] = cands; files = []
+                if len(cands) >= 6: break
+            cands = cands[:6]; allc[k] = cands; files = []
             for i, c in enumerate(cands):
                 f = f'review/{k}-{i}.jpg'
                 try: save(c['thumb'], f); files.append(f)
